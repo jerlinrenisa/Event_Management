@@ -1,0 +1,84 @@
+/* Global Styles */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #e3f2fd; /* Light sky blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Center Content */
+  .container {
+    width: 50%;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Heading Styles */
+  h2 {
+    color: #0288d1; /* Sky blue */
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0288d1;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #01579b;
+  }
+  
+  /* Event List */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: #f1faff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  li button {
+    margin-left: 10px;
+  }
+  
+  /* Filter Dropdown */
+  select {
+    width: auto;
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,37 @@
+/* Adjust Container Width */
+.container {
+    width: 45%; /* Adjust this to fit your needs */
+    max-width: 600px; /* Prevent it from getting too wide */
+  }
+  
+  /* Adjust Form Elements */
+  input, textarea, select {
+    max-width: 400px; /* Keeps input fields from becoming too wide */
+    font-size: 14px; /* Adjusts text size inside fields */
+  }
+  
+  /* Adjust Buttons */
+  button {
+    max-width: 200px; /* Prevents buttons from stretching too much */
+    padding: 12px 15px; /* Adjusts button size */
+    font-size: 14px;
+  }
+  
+  /* Adjust Event List Items */
+  .event-item {
+    max-width: 500px; /* Restricts event item width */
+    padding: 10px 15px; /* Adjusts spacing */
+    font-size: 14px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .container {
+      width: 80%; /* Increase width on smaller screens */
+    }
+  
+    input, textarea, select {
+      max-width: 100%; /* Allow full width on small screens */
+    }
+  }
+  
