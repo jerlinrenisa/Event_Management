@@ -1,35 +1,32 @@
-import React, { useState } from "react";
-
-const events = [
-    { id: 1, name: "Birthday Party", date: "2025-08-15", location: "Coimbatore", type: "Personal" },
-    { id: 2, name: "Tech Conference", date: "2025-09-10", location: "Chennai", type: "Professional" },
-    { id: 3, name: "Wedding Ceremony", date: "2025-10-05", location: "Madurai", type: "Personal" },
-    { id: 4, name: "Business Summit", date: "2025-11-20", location: "Trichy", type: "Professional" },
-  ];
+import React, { useContext } from "react";
+import { EventContext } from "../components/EventProvider";
 
 function EventDisplayPage() {
-  const [filter, setFilter] = useState("All");
+  const { events, setEvents } = useContext(EventContext); // Get events from context
 
-  const filteredEvents = filter === "All" ? events : events.filter(event => event.type === filter);
+  const handleDeleteEvent = (index) => {
+    setEvents(events.filter((_, i) => i !== index));
+  };
 
   return (
-    <div>
-      <h2>Upcoming Events</h2>
-
-      <label>Filter by Type: </label>
-      <select value={filter} onChange={(e) => setFilter(e.target.value)}>
-        <option value="All">All</option>
-        <option value="Personal">Personal</option>
-        <option value="Professional">Professional</option>
-      </select>
-
-      <ul>
-        {filteredEvents.map((event) => (
-          <li key={event.id}>
-            <strong>{event.name}</strong> - {event.date} - {event.location} ({event.type})
-          </li>
-        ))}
-      </ul>
+    <div className="event-display-container">
+      <h1>Event List</h1>
+      {events.length === 0 ? (
+        <p>No events added yet.</p>
+      ) : (
+        <ul className="event-list">
+          {events.map((event, index) => (
+            <li key={index} className="event-item">
+              <h3>{event.eventName}</h3>
+              <p>{event.eventDescription}</p>
+              <p><strong>Start:</strong> {event.startDate}</p>
+              <p><strong>End:</strong> {event.endDate}</p>
+              <p><strong>Created By:</strong> {event.createdBy}</p>
+              <button onClick={() => handleDeleteEvent(index)} className="delete-button">Delete</button>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

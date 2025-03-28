@@ -1,3 +1,24 @@
+// import React from "react";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import HomePage from "./pages/HomePage";
+// import AddEventPage from "./pages/AddEventPage";
+// import EventDisplayPage from "./pages/EventDisplayPage";
+
+// function App() {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<HomePage />} />
+//         <Route path="/add-event" element={<AddEventPage />} />
+//         <Route path="/events" element={<EventDisplayPage />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// export default App; // ✅ Make sure this line is present
+
+
 import React from "react";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
